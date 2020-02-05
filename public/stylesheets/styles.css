@@ -1,0 +1,149 @@
+html {
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font: 32px Gupter;
+  background-color: black;
+  z-index: 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 3%;
+}
+
+main {
+  background-image: url("/images/main.png");
+  z-index: 10;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 30% 70%;
+}
+
+aside {
+  background-color: #828282;
+  z-index: 20;
+  height: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  border-radius: 5px;
+  color: white;
+}
+
+section {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+section#television {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80% 20%;
+}
+
+section#epg {
+  display: none;
+}
+
+aside hr {
+  margin-bottom: 50px;
+}
+
+.menu_item {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.menu_item.selectable:hover {
+  background-color: darkseagreen;
+}
+
+.menu_item img {
+  vertical-align: bottom;
+  margin-right: 25px;
+  margin-left: 25px;
+  width: 35px;
+}
+
+section #player {
+  grid-column: 1;
+  grid-row: 1;
+  border-color: aqua;
+  padding: 10px;
+}
+
+section #myvideo {
+  background-color: transparent;
+}
+
+section #player video {
+  background-color: transparent;
+}
+
+section #channel {
+  grid-column: 1;
+  grid-row: 2;
+  border-radius: 8px;
+  border-color: lightskyblue;
+  padding: 3px;
+  background-color: rgba(51, 225, 255, 0.2);
+}
+
+section #channel .channel {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 100%;
+  height: 100%;
+  color: white;
+}
+
+section #channel .channel .logo {
+  text-align: center;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid transparent;
+}
+
+section #channel .channel .logo img {
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+section #channel .channel .description {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 3px solid transparent;
+}
+
+section #channel .channel .description .details {
+  margin-top: 40px;
+  font-size: 24px;
+}
+
+section #channel .channel .selectable:hover {
+  font-weight: bold;
+  background-color: darkseagreen;
+  border: 3px solid white;
+}
+
+.visible {
+  height: initial;
+  opacity: 1 !important;
+  transition: opacity 1s linear;
+}
+
+.hidden {
+  opacity: 0 !important;
+  height: 0 !important;
+  transition: opacity 1s linear, height 0s 1s;
+}
+
+/*# sourceMappingURL=styles.css.map */

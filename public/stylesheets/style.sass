@@ -1,0 +1,162 @@
+$main_bg: black
+$index: 0
+$fullscreen: 100%
+$main_padding: 3%
+$column1: 30%
+$column2: 70%
+$green : darkseagreen
+//$channel_hover_color: #e0bf1b6b
+$channel_hover_color: darkseagreen
+
+
+@media screen and (max-width: 1920px)
+  body
+    font: 16px Gupter
+  section #channel .channel .description .details
+    font-size: 12px
+  section #channel .channel .logo img
+    height: 25px
+    margin: 0 auto
+    display: block
+    margin-bottom: 5px
+
+@media screen and (min-width: 1920px)
+  body
+    font: 32px Gupter
+  section #channel .channel .description .details
+    font-size: 24px
+  section #channel .channel .logo img
+    height: 50px
+    margin: 0 auto
+    display: block
+    margin-bottom: 10px
+
+
+html
+  overflow: hidden
+  box-sizing: border-box
+  height: $fullscreen
+
+
+body
+  background-color: $main_bg
+  z-index: $index
+  height: $fullscreen
+  box-sizing: border-box
+  padding: $main_padding
+
+main
+  background-image: url("/images/main.png")
+  z-index: $index + 10
+  height: $fullscreen
+  display: grid
+
+  grid-template-rows: 100%
+  grid-template-columns: $column1 $column2
+
+aside
+  background-color: rgb(130,130,130)
+  z-index: $index + 20
+  height: $fullscreen
+  grid-column: 1
+  grid-row: 1
+  border-radius: 5px
+  color: white
+
+section
+  grid-column: 2
+  grid-row: 1
+
+
+section#television
+  display: grid
+  grid-template-columns: 100%
+  grid-template-rows: 80% 20%
+
+section#epg
+  display: none
+
+aside hr
+  margin-bottom: 50px
+
+.menu_item
+  width: 100%
+  padding-top: 15px
+  padding-bottom: 15px
+  margin-bottom: 10px
+
+.menu_item.selectable:hover
+  background-color: $green
+
+.menu_item img
+  vertical-align: bottom
+  margin-right: 25px
+  margin-left: 25px
+  width: 35px
+
+
+
+section #player
+  grid-column: 1
+  grid-row: 1
+  border-color: aqua
+  padding: 10px
+
+
+section #myvideo
+  background-color: transparent
+
+section #player video
+  background-color: transparent
+
+
+
+
+section #channel
+  grid-column: 1
+  grid-row: 2
+  border-radius: 8px
+  border-color: lightskyblue
+  padding: 3px
+  background-color: rgba(51, 225, 255, 0.2)
+
+
+section #channel .channel
+  display: grid
+  grid-template-columns: 30% 70%
+  grid-template-rows: 100%
+  height: 100%
+  color: white
+
+
+section #channel .channel .logo
+  text-align: center
+  border-radius: 8px
+  margin: 10px
+  padding: 10px
+  border: 3px solid transparent
+
+
+section #channel .channel .description
+  margin: 10px
+  padding: 10px
+  border-radius: 8px
+  border: 3px solid transparent
+
+
+section #channel .channel .selectable:hover
+  font-weight: bold
+  background-color: $channel_hover_color
+  border: 3px solid white
+
+.visible
+  height: initial
+  opacity: 1 !important
+  transition: opacity 0.5s linear
+
+.hidden
+  opacity: 0 !important
+  height: 0 !important
+  transition: opacity 0.1s linear, height 0s 0.1s
+
+
